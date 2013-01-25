@@ -1,0 +1,1 @@
+./pomodzen.py -l 25m -c "./pomodzen.py -l 5m --fg=#3F3 -c ./pomodoro"
