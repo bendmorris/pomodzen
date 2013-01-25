@@ -120,6 +120,8 @@ def main():
         dest="done_cmd",
         help="command to run at the end of a Pomodoro")
 
+    parser.add_argument("-f", "--fg", help="foreground color", nargs=1, dest="color")
+
     args = parser.parse_args()
 
     if args.length:
@@ -138,6 +140,9 @@ def main():
 
     if args.done_cmd:
         done_cmd = args.done_cmd
+
+    if args.color:
+        dzen_cmd[dzen_cmd.index('-fg')+1] = args.color[0]
 
     pomodzen(
         length=pomodoro_length,
