@@ -1,1 +1,2 @@
-./pomodzen.py -l 25m -c "./pomodzen.py -l 5m --fg=#3F3 -c ./pomodoro"
+#!/bin/bash
+./pomodzen -l 25m -c "./pomodzen -l 5m --fg=#3F3 -c ./pomodoro"

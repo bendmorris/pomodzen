@@ -17,7 +17,7 @@ width  = 265
 pomodoro_length = (60) * 25
 
 # runs at the end of the pomodoro
-done_cmd = "mplayer ~/vuvuzela.opus"
+done_cmd = "mplayer pomodoro_done.wav"
 
 
 
@@ -139,7 +139,7 @@ def main():
         pomodoro_length = l
 
     if args.done_cmd:
-        done_cmd = args.done_cmd
+        done_cmd += '; ' + args.done_cmd
 
     if args.color:
         dzen_cmd[dzen_cmd.index('-fg')+1] = args.color[0]
